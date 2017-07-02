@@ -159,6 +159,19 @@ for (btnIndex; btnIndex < prizes.length; btnIndex++) {
 
 }
 
+function setInputValue() {
+    var input = document.querySelector("input");
+    var button = document.querySelector(".change");
+
+    function initValue() {
+        input.setAttribute("value", "It is awesome");
+    }
+
+    button.addEventListener("click", initValue);
+}
+
+setInputValue()
+
 
 
 
