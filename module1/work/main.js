@@ -178,6 +178,8 @@ function exchangeValues() {
     var button = document.querySelector(".reset");
     var firstValue = firstInput.value;
     var secondValue = secondInput.value;
+    var colors = ["red", "green", "blue"];
+    var colorIndex = 0;
 
     function reset() {
         if (firstInput.value !== firstValue) {
@@ -190,6 +192,14 @@ function exchangeValues() {
             firstInput.value = secondInput.value;
         }
 
+        firstInput.style.color = colors[colorIndex];
+        secondInput.style.color = colors[colorIndex]
+
+        if (colorIndex < 2) {
+            colorIndex++;
+        } else {
+            colorIndex = 0;
+        }
     }
 
     button.addEventListener("click", reset);
