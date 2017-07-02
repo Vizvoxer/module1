@@ -221,3 +221,15 @@ button.addEventListener("click", pushInput);
 }
 
 addInput();
+
+function valueOffFocus() {
+    var input = document.querySelector(".tofocus");
+
+    function displayValue() {
+        console.log(input.value);
+    }
+
+    input.addEventListener("blur", displayValue);
+}
+
+valueOffFocus();
