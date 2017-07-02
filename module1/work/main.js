@@ -99,7 +99,9 @@ function displayAsync() {
     var arr = [1, 2, 3, 4, 5, 6 ];
 
     arr.forEach(function (i) {
-        setTimeout(()=>{console.log(i);},1000)
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
     })
 }
 
@@ -111,5 +113,25 @@ displayAsync();
 
     console.log(b);
 })();
+
+function findElement(arr, n) {
+    var i = 0;
+
+    for (i; i < arr.length; i++) {
+        if (arr[i] === n) {
+            console.log(i);
+
+            return
+        }
+
+    }
+    console.log("Not found");
+}
+
+findElement([1,3,5], 5);
+
+
+
+
 
 
