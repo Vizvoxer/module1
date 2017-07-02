@@ -14,3 +14,21 @@ function isEqual(a,b){
 
 console.log(isEqual(2,3));
 
+function makeNumberList() {
+    var i = 1;
+    while(i <= 50){
+        console.log(i)
+        i++;
+    }
+}
+
+makeNumberList();
+
+function doNumberList() {
+    var i = 1;
+    for (i; i <= 50; i++) {
+        console.log(i);
+    }
+}
+
+doNumberList();
