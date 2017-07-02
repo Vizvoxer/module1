@@ -64,3 +64,14 @@ function displayMoreThen() {
 
 displayMoreThen();
 
+function joinArray() {
+    var arr = ['я', 'учу', 'javascript', '!'];
+    var joinedWithSymbol = arr.join("+");
+    var joinedWithSpace = arr.join(" ");
+    
+    console.log(joinedWithSymbol);
+    console.log(joinedWithSpace);
+}
+
+joinArray();
+
