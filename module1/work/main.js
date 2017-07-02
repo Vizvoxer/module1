@@ -172,10 +172,28 @@ function setInputValue() {
 
 setInputValue()
 
+function exchangeValues() {
+    var firstInput = document.querySelector(".exchange");
+    var secondInput = document.querySelector(".exchange2");
+    var button = document.querySelector(".reset");
+    var firstValue = firstInput.value;
+    var secondValue = secondInput.value;
 
+    function reset() {
+        if (firstInput.value !== firstValue) {
+            firstValue = firstInput.value;
+            secondValue = firstInput.value;
+            secondInput.value = firstInput.value;
+        } else if (secondInput.value !== secondValue) {
+            secondValue = secondInput.value;
+            firstValue = secondInput.value;
+            firstInput.value = secondInput.value;
+        }
 
+    }
 
+    button.addEventListener("click", reset);
+}
 
-
-
+exchangeValues();
 
