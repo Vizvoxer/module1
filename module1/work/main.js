@@ -39,8 +39,10 @@ function makeStatement() {
     var obj = {
         'Оттава': 'Канада',
         'Киев': 'Украина'
-    }
-    for (var el in obj) {
+    };
+    var el;
+    for (el in obj) {
+        
         if(obj.hasOwnProperty(el)) {
             console.log(`${el} - это ${obj[el]}`);
         }
