@@ -68,10 +68,20 @@ function joinArray() {
     var arr = ['я', 'учу', 'javascript', '!'];
     var joinedWithSymbol = arr.join("+");
     var joinedWithSpace = arr.join(" ");
-    
+
     console.log(joinedWithSymbol);
     console.log(joinedWithSpace);
 }
 
 joinArray();
+
+function concatArr() {
+    var firstArr = ['a', 'b', 'c'];
+    var secondArr = [1, 2, 3];
+    var concated = firstArr.concat(secondArr);
+
+    console.log(concated);
+}
+
+concatArr();
 
