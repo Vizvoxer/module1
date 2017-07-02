@@ -1,5 +1,28 @@
 @import 'variables';
 
-h1 {
-  color: @color-forestgreen;
+body{
+  margin:0;
+  padding:12px;
+}
+
+.c-menu{
+  width:100%;
+  height:30px;
+  background-color: @menu-color;
+  display:flex;
+  align-items:center;
+  overflow: hidden;
+  &__item{
+    color:white;
+    font-size:@menu-items-size;
+    text-decoration: none;
+    display:block;
+    padding:10px;
+    box-sizing:border-box;
+  }
+}
+
+.is-active{
+  background-color:@base-color;
+  color:white;
 }
