@@ -130,6 +130,19 @@ function findElement(arr, n) {
 
 findElement([1,3,5], 5);
 
+var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+var btnIndex = 0;
+
+for (btnIndex; btnIndex < prizes.length; btnIndex++) {
+    (function (btnIndex) {
+        document.getElementById('btn-' + btnIndex).onclick = function () {
+            console.log(prizes[btnIndex]);
+            };
+        })(btnIndex);
+
+    }
+
+
 
 
 
