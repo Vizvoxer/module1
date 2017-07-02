@@ -207,3 +207,17 @@ function exchangeValues() {
 
 exchangeValues();
 
+function addInput() {
+var container = document.querySelector(".toAppend");
+var button = document.querySelector(".append");
+var example = document.createElement("input");
+example.setAttribute("type","text");
+
+function pushInput() {
+    container.appendChild(example);
+}
+
+button.addEventListener("click", pushInput);
+}
+
+addInput();
