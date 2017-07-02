@@ -94,3 +94,22 @@ function pushToArr() {
 }
 
 pushToArr();
+
+function displayAsync() {
+    var arr = [1, 2, 3, 4, 5, 6 ];
+
+    arr.forEach(function (i) {
+        setTimeout(()=>{console.log(i);},1000)
+    })
+}
+
+displayAsync();
+
+(function() {
+    var a = 5;
+    var b = a;
+
+    console.log(b);
+})();
+
+
