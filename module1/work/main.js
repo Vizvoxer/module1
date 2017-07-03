@@ -250,6 +250,23 @@ recursion([1000,2000,3000,4000,5000]);
 (function helloWorld() {
     var arr = ["Hello", "world", "!"];
     var container = document.querySelector(".hello");
+
     container.innerHTML = arr[0] + " " + arr[1] + arr[2];
 //    or: container.innerHTML = arr.join(" "); but now we can't control spaces.
 })();
+
+function isNumberPresent(n) {
+    var arr = [1, 2, 5, 9, 4, 13, 4, 10];
+    var i = 0;
+
+    for (i; i < arr.length; i++) {
+        if (arr[i] === n) {
+            console.log("Present!");
+            return;
+        }
+    }
+
+    console.log("Not found!");
+}
+
+isNumberPresent(4);
