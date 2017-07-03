@@ -159,7 +159,7 @@ for (btnIndex; btnIndex < prizes.length; btnIndex++) {
 
 }
 
-function setInputValue() {
+(function setInputValue() {
     var input = document.querySelector("input");
     var button = document.querySelector(".change");
 
@@ -168,11 +168,11 @@ function setInputValue() {
     }
 
     button.addEventListener("click", initValue);
-}
+})();
 
-setInputValue()
 
-function exchangeValues() {
+
+(function exchangeValues() {
     var firstInput = document.querySelector(".exchange");
     var secondInput = document.querySelector(".exchange2");
     var button = document.querySelector(".reset");
@@ -203,11 +203,10 @@ function exchangeValues() {
     }
 
     button.addEventListener("click", reset);
-}
+})();
 
-exchangeValues();
 
-function addInput() {
+(function addInput() {
 var container = document.querySelector(".toAppend");
 var button = document.querySelector(".append");
 var example = document.createElement("input");
@@ -218,11 +217,10 @@ function pushInput() {
 }
 
 button.addEventListener("click", pushInput);
-}
+})();
 
-addInput();
 
-function valueOffFocus() {
+(function valueOffFocus() {
     var input = document.querySelector(".tofocus");
 
     function displayValue() {
@@ -230,6 +228,33 @@ function valueOffFocus() {
     }
 
     input.addEventListener("blur", displayValue);
-}
+})();
 
-valueOffFocus();
+
+window.onload = function() {
+    var elements = {
+        prev: document.getElementById('prev'),
+        current: document.getElementById('current'),
+        next: document.getElementById('next')
+    };
+
+    var events = {
+        prev: function () {
+            console.log('prev');
+        },
+
+        current: function () {
+            console.log('current');
+        },
+
+        next: function () {
+            console.log('next');
+        }
+    };
+
+    Object.keys(elements).forEach(function(key){
+        elements[key].addEventListener("click", events[key]);
+    })
+};
+
+
