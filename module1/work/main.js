@@ -131,18 +131,6 @@ function findElement(arr, n) {
 findElement([1,3,5], 5);
 
 
-// var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
-// var btnIndex = 0;
-//
-// for (btnIndex; btnIndex < prizes.length; btnIndex++) {
-//     (function (btnIndex) {
-//         document.getElementById('btn-' + btnIndex).onclick = function () {
-//             console.log(prizes[btnIndex]);
-//             };
-//         })(btnIndex);
-//
-//     }
-
 var prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
 var btnIndex = 0;
 
@@ -150,7 +138,7 @@ function showText(el,ind) {
     return function ret() {
         console.log(el[ind]);
     }
-};
+}
 
 for (btnIndex; btnIndex < prizes.length; btnIndex++) {
     (function (btnIndex) {
