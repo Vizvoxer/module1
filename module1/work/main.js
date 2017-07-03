@@ -270,3 +270,24 @@ function isNumberPresent(n) {
 }
 
 isNumberPresent(4);
+
+function compare(a,b) {
+    var found = false;
+
+    a.forEach( function(el) {
+    var i = 0;
+
+    for (i; i < b.length; i++) {
+        if (el === b[i]) {
+            console.log(el);
+            found = true;
+        }
+    }
+
+})
+    if(found === false) {
+        console.log("Not found");
+    }
+}
+
+compare([1,2,3],[9,4,6,1]);
