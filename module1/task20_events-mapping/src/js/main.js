@@ -19,5 +19,7 @@ window.onload = function() {
         }
     };
 
-    // events mapping
+    Object.keys(elements).forEach(function(key){
+        elements[key].addEventListener("click", events[key]);
+    })
 };
