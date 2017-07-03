@@ -231,12 +231,14 @@ button.addEventListener("click", pushInput);
 })();
 
 
+
 function recursion(arr,i) {
  i=0;
 
     (function loop(i){
       console.log(arr[i]);
         i++;
+
       if (i < arr.length) {
           loop(i);
       }
@@ -244,3 +246,10 @@ function recursion(arr,i) {
 }
 
 recursion([1000,2000,3000,4000,5000]);
+
+(function helloWorld() {
+    var arr = ["Hello", "world", "!"];
+    var container = document.querySelector(".hello");
+    container.innerHTML = arr[0] + " " + arr[1] + arr[2];
+//    or: container.innerHTML = arr.join(" "); but now we can't control spaces.
+})();
