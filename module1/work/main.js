@@ -258,3 +258,16 @@ window.onload = function() {
 };
 
 
+function recursion(arr,i) {
+ i=0;
+
+    (function loop(i){
+      console.log(arr[i]);
+        i++;
+      if (i < arr.length) {
+          loop(i);
+      }
+  })(i);
+}
+
+recursion([1000,2000,3000,4000,5000]);
